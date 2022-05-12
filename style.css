@@ -9,23 +9,6 @@ body {
     background-color: #ebf2ff;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #fff;
-
-}
-
-.navbar__brand {
-    width: 100px;
-}
-
-.navbar__logo {
-    width: 100%;
-}
-
-
 .button__primary {
     background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
     color: #fff;
@@ -42,6 +25,41 @@ body {
     margin: 0 auto;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+
+}
+
+.navbar__brand {
+    width: 100px;
+}
+
+.navbar__logo {
+    width: 100%;
+}
+
+.nav__item {
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nav__item:hover {
+    border: 2px solid blue;
+}
+
+
 .hero__image__container {
     width: 100%;
 }
@@ -57,10 +75,17 @@ body {
     margin: 20px 0;
 }
 
-.nav__item:hover {
-    border: 2px solid blue;
+.explore__menu__text{
+    font-size: 30px;
+    margin: 50px 0 30px 0;
+    text-align: center;
 }
 
+.food__card {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
 
 .food__card__image__container {
     width: 100%;
@@ -71,23 +96,15 @@ body {
     border-radius: 8px 8px 0 0;
 }
 
-.food__card {
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
 .food_card__description {
     padding: 15px;
 }
 
-.explore__menu__text,
-.restaurant__text {
+.restaurant__text{
     font-size: 30px;
-    margin: 50px 0 30px 0;
+    margin: 50px 0 25px 0;
     text-align: center;
 }
-
 
 .restaurant__images__container{
     width:100%;
@@ -129,22 +146,63 @@ body {
 }
 
 
+.contact__container{
+    text-align:center;
+}
+
+.contact__form__container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top:10px;
+}
+
+#email_container{
+    height:20px;
+    background-color:#ffb8b8;
+    border:1px solid red;
+    border-radius: 3px;
+}
+
+.section__container{
+    margin-top:20px;
+}
+
+.get__update__button{
+    padding:4px;
+    font-size:14px;
+    border-radius:3px;
+}
+
+
 /* Tablet Specification */
 
 @media(min-width:768px) {
     .navbar {
         justify-content: space-between;
         padding: 2px 30px;
+        height: 80px;
+        box-shadow: 0px 5px 8px 0px rgb(10 10 10 / 20%);
+
+
     }
+
     .button__primary{
         font-size:18px;
         padding:18px;
     }
+
     .hero__container {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         margin-top: 20px;
+        margin-bottom:100px;
+    }
+
+    .explore__menu__container{
+        margin-bottom: 100px;
     }
 
     .explore__menu__lists {
@@ -176,11 +234,11 @@ body {
         height: 100%;
         background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
         z-index: -1;
-        transform: skewY(-5deg);
+        transform: skewY(-3deg);
     }
 
     .explore__menu__container{
-        margin-top:50px;
+        margin-top:100px;
     }
 
     .restaurant__container{
@@ -192,6 +250,12 @@ body {
         width:100%;
         font-size:40px;
     }
+
+    .contact__container{
+        margin-top:100px;
+    }
+
+
 }
 
 /* PC Specification */
@@ -229,11 +293,59 @@ body {
         font-size: 50px;
     }
 
+    .restaurant__image__1,
+    .restaurant__image__4{
+        width:100%;
+        height:150px;
+    }
+
+    .restaurant__image__2,
+    .restaurant__image__3{
+        width:110%;
+        height:180px;
+    }
+
+    .view__more__button{
+        background:none;
+        font-size: medium;
+    }
+
+    .get__update__button{
+        padding:6px;
+        font-size:14px;
+        border-radius:5px;
+    }
+
+    .section__container{
+        margin-top:50px;
+    }
+
+    .contact__form__container{
+        column-gap: 10px;
+        margin-top:10px;
+    }
+
+    #email__container{
+        height:35px;
+        border-radius:4px;
+    }
 
 }
 
 @media(min-width:1400px) {
     .container {
         max-width: 1250px;
+    }
+
+    .restaurant__image__1,
+    .restaurant__image__4{
+        width:100%;
+        height:180px;
+    }
+
+    .restaurant__image__2,
+    .restaurant__image__3{
+        width:110%;
+        height:210px;
     }
 }
